@@ -1,14 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BumboDB.EntityModels;
 
 public class InzetbaarOpAfdeling
 {
-    [Key]
-    [Required]
+    [Key, Column(Order = 0)]
     public Afdeling Afdeling { get; set; }
 
-    //[Key] Composite key in modelbuilder
-    [Required]
+    [Key, Column(Order = 1)]
     public Werknemer Werknemer { get; set; }
 }

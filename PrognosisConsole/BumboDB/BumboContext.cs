@@ -26,16 +26,14 @@ public sealed class BumboContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        //Composite keys
+        
         modelBuilder.Entity<InzetbaarOpAfdeling>()
             .HasKey(c => new { c.Afdeling, c.Werknemer });
 
         modelBuilder.Entity<PrognoseInput>()
             .HasKey(c => new { c.Datum, c.Filiaal, c.Eenheid });
 
-
         modelBuilder.Entity<PrognoseOutput>()
-            //TODO: fix composite keys
             .HasKey(c => new { c.Datum, c.Filiaal, c.Afdeling });
     }
 
