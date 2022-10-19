@@ -5,6 +5,7 @@ namespace BumboDB.EntityModels;
 public class Roosterpunt
 {
     [Key]
+    [Range(0, int.MaxValue)] // Only positive numbers
     public int RoosterId { get; set; }
 
     [Required]

@@ -5,6 +5,7 @@ namespace BumboDB.EntityModels;
 public class Filiaal
 {
     [Key]
+    [Range(0, int.MaxValue)] // Only positive numbers
     public int FiliaalId { get; set; }
     
     [Required]
@@ -17,5 +18,6 @@ public class Filiaal
     public Locatie Locatie { get; set; }
 
     [Required]
+    [Range(0, int.MaxValue)] // Only positive numbers
     public int MeterSchappen { get; set; }
 }

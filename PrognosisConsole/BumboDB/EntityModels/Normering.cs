@@ -5,6 +5,7 @@ namespace BumboDB.EntityModels;
 public class Normering
 {
     [Key]
+    [Range(0, int.MaxValue)] // Only positive numbers
     public int NormeringId { get; set; }
 
     [Required]

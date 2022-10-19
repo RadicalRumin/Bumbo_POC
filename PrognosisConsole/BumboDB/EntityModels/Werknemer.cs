@@ -10,6 +10,7 @@ public class Werknemer
     }
     
     [Key]
+    // [RegularExpression("")] TODO look up format
     public string BID { get; set; }
 
     [Required]
