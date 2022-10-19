@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrognosisConsole", "PrognosisConsole\PrognosisConsole.csproj", "{F17CF3DE-1E2A-4664-893A-CEE1174DEF22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BumboDB", "BumboDB\BumboDB.csproj", "{7F6412DD-7675-452D-8942-6BC53AE4F5B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F17CF3DE-1E2A-4664-893A-CEE1174DEF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F17CF3DE-1E2A-4664-893A-CEE1174DEF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F17CF3DE-1E2A-4664-893A-CEE1174DEF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F17CF3DE-1E2A-4664-893A-CEE1174DEF22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F6412DD-7675-452D-8942-6BC53AE4F5B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6412DD-7675-452D-8942-6BC53AE4F5B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6412DD-7675-452D-8942-6BC53AE4F5B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6412DD-7675-452D-8942-6BC53AE4F5B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
