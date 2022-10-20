@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BumboDB.EntityModels;
 
@@ -12,7 +14,7 @@ public class Werknemer
     [Key]
     // [RegularExpression("")] TODO look up format
     public string BID { get; set; }
-
+    
     [Required]
     public string Voornaam { get; set; }
     
@@ -26,14 +28,14 @@ public class Werknemer
     public string Telefoonnummer { get; set; }
 
     [Required]
-    public DateOnly Geboortedatum { get; set; }
+    public DateTime Geboortedatum { get; set; }
 
     [Required]
     [EmailAddress]
     public string Email { get; set; }
 
     [Required]
-    public DateOnly InDienstSinds { get; set; }
+    public DateTime InDienstSinds { get; set; }
 
     [Required]
     public int Loonschaal { get; set; }
@@ -41,9 +43,18 @@ public class Werknemer
     [Required]
     public Functie Functie { get; set; }
     
+    [NotMapped]
+    public bool IsManager
+    {
+        get => Functie.Naam == "Manager";
+    }
+    
     [Required]
     public Filiaal Filiaal { get; set; }
     
     [Required] 
+    public int LocatieID { get; set; }
     public Locatie Locatie { get; set; }
+
+    public Afdeling Afdeling { get; set; }
 }

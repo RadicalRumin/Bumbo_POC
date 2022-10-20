@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BumboDB.EntityModels;
 
@@ -10,6 +11,7 @@ public class GewerkteUren
     [Required]
     public DateTime BeginTijd { get; set; }
     
+   
     public DateTime EindTijd { get; set; }
 
     [Required]

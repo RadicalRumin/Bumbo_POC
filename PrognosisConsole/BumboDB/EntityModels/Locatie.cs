@@ -16,4 +16,8 @@ public class Locatie
 
     [Required]
     public string Plaats { get; set; }
+
+    public ICollection<Werknemer> Werknemers { get; set; }
+
+    public ICollection<Filiaal> Filialen { get; set; }
 }

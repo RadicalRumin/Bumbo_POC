@@ -27,14 +27,46 @@ public sealed class BumboContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         
-        modelBuilder.Entity<InzetbaarOpAfdeling>()
-            .HasKey(c => new { c.Afdeling, c.Werknemer });
 
         modelBuilder.Entity<PrognoseInput>()
-            .HasKey(c => new { c.Datum, c.Filiaal, c.Eenheid });
+            .HasKey(c => new { c.Datum, c.FiliaalID, c.EenheidType });
+        
+        modelBuilder.Entity<PrognoseInput>()
+            .HasOne(p => p.Eenheid)
+            .WithMany(p => p.PrognoseInputs)
+            .HasForeignKey(p => p.EenheidType);
+        
+        modelBuilder.Entity<PrognoseInput>()
+            .HasOne(p => p.Filiaal)
+            .WithMany(p => p.PrognoseInputs)
+            .HasForeignKey(p => p.FiliaalID);
+        
+        modelBuilder.Entity<PrognoseOutput>()
+            .HasKey(c => new { c.Datum, c.FiliaalId, c.AfdelingNaam });
 
         modelBuilder.Entity<PrognoseOutput>()
-            .HasKey(c => new { c.Datum, c.Filiaal, c.Afdeling });
+            .HasOne(p => p.Afdeling)
+            .WithMany(p => p.PrognoseOutputs)
+            .HasForeignKey(p => p.AfdelingNaam);
+        
+        modelBuilder.Entity<PrognoseOutput>()
+            .HasOne(p => p.Filiaal)
+            .WithMany(p => p.PrognoseOutputs)
+            .HasForeignKey(p => p.FiliaalId);
+        
+        
+        modelBuilder.Entity<Werknemer>()
+            .HasOne(w => w.Locatie)
+            .WithMany(l => l.Werknemers)
+            .HasForeignKey(w => w.LocatieID)
+            .OnDelete(DeleteBehavior.NoAction);
+
+        modelBuilder.Entity<Filiaal>()
+            .HasOne(f => f.Locatie)
+            .WithMany(l => l.Filialen)
+            .HasForeignKey(f => f.FiliaalId)
+            .OnDelete(DeleteBehavior.NoAction);
+
     }
 
     #region DbSets
@@ -45,7 +77,6 @@ public sealed class BumboContext : DbContext
     public DbSet<Filiaal> Filialen;
     public DbSet<Functie> Functies;
     public DbSet<GewerkteUren> GewerkteUren;
-    public DbSet<InzetbaarOpAfdeling> InzetbaarOpAfdeling;
     public DbSet<Locatie> Locaties;
     public DbSet<Normering> Normeringen;
     public DbSet<PrognoseInput> PrognoseInputs;

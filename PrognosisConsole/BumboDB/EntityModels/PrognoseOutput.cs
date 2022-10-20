@@ -5,13 +5,17 @@ namespace BumboDB.EntityModels;
 
 public class PrognoseOutput
 {
-    [Key, Column(Order = 0)]
-    public DateOnly Datum { get; set; }
+    [Key]
+    public DateTime Datum { get; set; }
 
-    [Key, Column(Order = 1)]
+    [Required]
+    public int FiliaalId { get; set; }
+
     public Filiaal Filiaal { get; set; }
 
-    [Key, Column(Order = 2)]
+    [Required]
+    public string AfdelingNaam { get; set; }
+
     public Afdeling Afdeling { get; set; }
 
     

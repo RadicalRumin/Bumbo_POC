@@ -12,12 +12,20 @@ public class Filiaal
     public string Naam { get; set; }
 
     [Required]
-    public Werknemer Manager { get; set; }
+    public int LocatieID { get; set; }
 
-    [Required]
     public Locatie Locatie { get; set; }
 
     [Required]
     [Range(0, int.MaxValue)] // Only positive numbers
     public int MeterSchappen { get; set; }
+    
+    #region Relationships
+
+    public ICollection<PrognoseInput> PrognoseInputs { get; set; }
+    public ICollection<PrognoseOutput> PrognoseOutputs { get; set; }
+
+    public ICollection<Werknemer> Werknemers { get; set; }
+
+    #endregion
 }

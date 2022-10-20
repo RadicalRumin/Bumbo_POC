@@ -5,9 +5,10 @@ namespace BumboDB.EntityModels;
 
 public class InzetbaarOpAfdeling
 {
-    [Key, Column(Order = 0)]
-    public Afdeling Afdeling { get; set; }
-
-    [Key, Column(Order = 1)]
-    public Werknemer Werknemer { get; set; }
+    // [Key, Column(Order = 0)] 
+    // public string AfdelingNaam { get; set; }
+    // public Afdeling Afdeling { get; set; }
+    //
+    // [Key, Column(Order = 1)]
+    // public Werknemer Werknemer { get; set; }
 }
