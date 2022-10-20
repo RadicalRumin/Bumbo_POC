@@ -13,6 +13,8 @@ public class Afdeling
 
     public ICollection<PrognoseOutput> PrognoseOutputs { get; set; }
 
+    public ICollection<Activiteit> ActiviteitFK { get; set; }
+
 
     #endregion
 }

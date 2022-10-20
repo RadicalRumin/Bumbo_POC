@@ -66,6 +66,11 @@ public sealed class BumboContext : DbContext
             .WithMany(l => l.Werknemers)
             .HasForeignKey(w => w.LocatieID)
             .OnDelete(DeleteBehavior.NoAction);
+        
+        modelBuilder.Entity<Werknemer>()
+            .HasOne(w => w.Filiaal)
+            .WithMany(l => l.Werknemers)
+            .OnDelete(DeleteBehavior.NoAction);
 
         modelBuilder.Entity<Filiaal>()
             .HasOne(f => f.Locatie)
@@ -73,80 +78,89 @@ public sealed class BumboContext : DbContext
             .HasForeignKey(f => f.FiliaalId)
             .OnDelete(DeleteBehavior.NoAction);
 
+        // modelBuilder.Entity<Afdeling>()
+        //     .HasMany(af => af.ActiviteitFK)
+        //     .WithOne(ac => ac.Afdeling);
         #endregion
 
         #region SeedData
-
-        var locatie = new Locatie()
-        {
-            Huisnummer = "12345",
-            Plaats = "Den Bosch",
-            Postcode = "1234AB",
-            LocatieId = 1
-        };
-
-        modelBuilder.Entity<Locatie>().HasData(locatie);
-
-        var filiaal = new Filiaal()
-        {
-            FiliaalId = 1,
-            Locatie = locatie,
-            Naam = "Bob",
-            MeterSchappen = 123,
-            LocatieID = 1,
-        };
-
-        modelBuilder.Entity<Filiaal>().HasData(filiaal);
-
-        var afdelingKassa = new Afdeling() { Naam = "Kassa" };
-        var afdelingVakkenvullen = new Afdeling() { Naam = "Vakkenvullers" };
-
-        modelBuilder.Entity<Afdeling>().HasData(afdelingKassa, afdelingVakkenvullen);
-
-        var vakenvullen = new Activiteit()
-        {
-            Afdeling = afdelingVakkenvullen,
-            Beschrijving = "Vakkenvullen"
-        };
-
-        var kassa = new Activiteit()
-        {
-            Afdeling = afdelingKassa,
-            Beschrijving = "Kassa"
-        };
-
-        modelBuilder.Entity<Activiteit>().HasData(vakenvullen, kassa);
-
-        var coli = new Eenheid() { EenheidType = "Coli" };
-        var klanten = new Eenheid() { EenheidType = "Klanten" };
-        var meter = new Eenheid() { EenheidType = "Meter" };
-
-        modelBuilder.Entity<Eenheid>().HasData(coli, klanten, meter);
-
-            modelBuilder.Entity<Normering>()
-            .HasData(
-                new Normering { 
-                    NormeringId = 1, 
-                    Eenheid = coli,
-                    Activiteit = vakenvullen,
-                    AantalPerUur = 2,
-                    Filiaal = filiaal,
-                },
-                new Normering { 
-                    NormeringId = 2, 
-                    Eenheid = klanten,
-                    Activiteit = kassa,
-                    AantalPerUur = 30,
-                    Filiaal = filiaal,
-                },
-                new Normering { 
-                    NormeringId = 3, 
-                    Eenheid = meter,
-                    Activiteit = vakenvullen,
-                    AantalPerUur = 120,
-                    Filiaal = filiaal,
-                }
-            );
+        
+        // var afdelingKassa = new Afdeling() { Naam = "Kassa"};
+        // afdelingKassa.Naam = "Kassa";
+        // var afdelingVakkenvullen = new Afdeling() { Naam = "Vakkenvullers" };
+        // afdelingVakkenvullen.Naam = "Vakkenvullers";
+        //
+        // modelBuilder.Entity<Afdeling>().HasData(afdelingKassa, afdelingVakkenvullen);
+        //
+        // var locatie = new Locatie()
+        // {
+        //     Huisnummer = "12345",
+        //     Plaats = "Den Bosch",
+        //     Postcode = "1234AB",
+        //     LocatieId = 1
+        // };
+        //
+        // modelBuilder.Entity<Locatie>().HasData(locatie);
+        //
+        // var filiaal = new Filiaal()
+        // {
+        //     FiliaalId = 1,
+        //     Locatie = locatie,
+        //     Naam = "Bob",
+        //     MeterSchappen = 123,
+        //     LocatieID = 1,
+        // };
+        //
+        // modelBuilder.Entity<Filiaal>().HasData(filiaal);
+        //
+        //
+        //
+        // var vakenvullen = new Activiteit()
+        // {
+        //    
+        //     Beschrijving = "Vakkenvullen",
+        //    // AfdelingFK = afdelingVakkenvullen.Naam
+        // };
+        //
+        // var kassa = new Activiteit()
+        // {
+        //    
+        //     Beschrijving = "Kassa",
+        //    // AfdelingFK = afdelingKassa.Naam
+        // };
+        //
+        // modelBuilder.Entity<Activiteit>().HasData(vakenvullen, kassa);
+        //
+        // var coli = new Eenheid() { EenheidType = "Coli" };
+        // var klanten = new Eenheid() { EenheidType = "Klanten" };
+        // var meter = new Eenheid() { EenheidType = "Meter" };
+        //
+        // modelBuilder.Entity<Eenheid>().HasData(coli, klanten, meter);
+        //
+        //     modelBuilder.Entity<Normering>()
+        //     .HasData(
+        //         new Normering { 
+        //             NormeringId = 1, 
+        //             Eenheid = coli,
+        //             Activiteit = vakenvullen,
+        //             AantalPerUur = 2,
+        //             Filiaal = filiaal,
+        //         },
+        //         new Normering { 
+        //             NormeringId = 2, 
+        //             Eenheid = klanten,
+        //             Activiteit = kassa,
+        //             AantalPerUur = 30,
+        //             Filiaal = filiaal,
+        //         },
+        //         new Normering { 
+        //             NormeringId = 3, 
+        //             Eenheid = meter,
+        //             Activiteit = vakenvullen,
+        //             AantalPerUur = 120,
+        //             Filiaal = filiaal,
+        //         }
+        //     );
 
         #endregion
     }
