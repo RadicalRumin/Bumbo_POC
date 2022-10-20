@@ -26,11 +26,17 @@ public sealed class BumboContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        
+
+
+        #region CompositeKeys
 
         modelBuilder.Entity<PrognoseInput>()
             .HasKey(c => new { c.Datum, c.FiliaalID, c.EenheidType });
-        
+
+        #endregion
+
+        #region Relationships
+
         modelBuilder.Entity<PrognoseInput>()
             .HasOne(p => p.Eenheid)
             .WithMany(p => p.PrognoseInputs)
@@ -67,6 +73,16 @@ public sealed class BumboContext : DbContext
             .HasForeignKey(f => f.FiliaalId)
             .OnDelete(DeleteBehavior.NoAction);
 
+        #endregion
+
+
+
+
+        #region SeedData
+
+        
+
+        #endregion
     }
 
     #region DbSets
