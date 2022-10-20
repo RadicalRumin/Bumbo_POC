@@ -26,8 +26,7 @@ public sealed class BumboContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-
-
+        
         #region CompositeKeys
 
         modelBuilder.Entity<PrognoseInput>()
@@ -75,12 +74,61 @@ public sealed class BumboContext : DbContext
 
         #endregion
 
-
-
-
         #region SeedData
 
-        
+        var locatie = new Locatie()
+        {
+            Huisnummer = "12345",
+            Plaats = "Den Bosch",
+            Postcode = "1234AB",
+            LocatieId = 1
+        };
+
+        var filiaal = new Filiaal()
+        {
+            FiliaalId = 1,
+            Locatie = locatie,
+            Naam = "Bob",
+            MeterSchappen = 123,
+            LocatieID = 1,
+        };
+
+        var vakenvullen = new Activiteit()
+        {
+            Afdeling = new Afdeling() { Naam = "Vakkenvullers" },
+            Beschrijving = "Vakkenvullen",
+        };
+
+        var kassa = new Activiteit()
+        {
+            Afdeling = new Afdeling() { Naam = "Kassa" },
+            Beschrijving = "Kassa"
+        };
+
+        modelBuilder.Entity<Normering>()
+            .HasData(
+                new Normering { 
+                    NormeringId = 1, 
+                    Eenheid = new Eenheid() { EenheidType = "Coli" },
+                    Activiteit = vakenvullen,
+                    AantalPerUur = 2,
+                    Filiaal = filiaal,
+                },
+                new Normering { 
+                    NormeringId = 2, 
+                    Eenheid = new Eenheid() { EenheidType = "Klanten" },
+                    Activiteit = kassa,
+                    AantalPerUur = 30,
+                    Filiaal = filiaal,
+                },
+                new Normering { 
+                    NormeringId = 3, 
+                    Eenheid = new Eenheid() { EenheidType = "Meter" },
+                    Activiteit = vakenvullen,
+                    AantalPerUur = 120,
+                    Filiaal = filiaal,
+                }
+            );
 
         #endregion
     }

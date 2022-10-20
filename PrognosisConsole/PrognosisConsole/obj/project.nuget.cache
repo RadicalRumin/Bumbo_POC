@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7EhzkToB/O9oQX1hI7Jw1PxXiyJANqz7zBIaq/ZazgMSqBp6XinmnEZ2xuwVLR6ZwKEnerTKgBcqSoAldfh4mQ==",
+  "dgSpecHash": "stviLRHr2Yya++xgofz2BOpUaUlpxJRS4KXWGzJBJuhWlTpOsSQv0tQSEeXZ75mldF85L8Rg6j00PaPj7YKVDQ==",
   "success": true,
-  "projectFilePath": "D:\\Avans\\LJ2\\Bumbo\\POC\\PrognosisConsole\\PrognosisConsole\\PrognosisConsole.csproj",
+  "projectFilePath": "/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/PrognosisConsole/PrognosisConsole.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
