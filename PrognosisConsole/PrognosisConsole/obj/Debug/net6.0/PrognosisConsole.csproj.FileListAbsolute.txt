@@ -1,0 +1,15 @@
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\bin\Debug\net6.0\PrognosisConsole.exe
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\bin\Debug\net6.0\PrognosisConsole.deps.json
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\bin\Debug\net6.0\PrognosisConsole.runtimeconfig.json
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\bin\Debug\net6.0\PrognosisConsole.dll
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\bin\Debug\net6.0\PrognosisConsole.pdb
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\obj\Debug\net6.0\PrognosisConsole.csproj.AssemblyReference.cache
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\obj\Debug\net6.0\PrognosisConsole.GeneratedMSBuildEditorConfig.editorconfig
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\obj\Debug\net6.0\PrognosisConsole.AssemblyInfoInputs.cache
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\obj\Debug\net6.0\PrognosisConsole.AssemblyInfo.cs
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\obj\Debug\net6.0\PrognosisConsole.csproj.CoreCompileInputs.cache
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\obj\Debug\net6.0\PrognosisConsole.dll
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\obj\Debug\net6.0\refint\PrognosisConsole.dll
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\obj\Debug\net6.0\PrognosisConsole.pdb
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\obj\Debug\net6.0\PrognosisConsole.genruntimeconfig.cache
+D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\PrognosisConsole\obj\Debug\net6.0\ref\PrognosisConsole.dll
