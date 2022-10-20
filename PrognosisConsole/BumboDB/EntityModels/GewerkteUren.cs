@@ -22,4 +22,6 @@ public class GewerkteUren
 
     [Required]
     public Filiaal Filiaal { get; set; }
+    
+    public override string ToString() => $"{Afdeling}/{Werknemer} {BeginTijd}:{EindTijd}";
 }

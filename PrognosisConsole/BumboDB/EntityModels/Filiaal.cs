@@ -19,7 +19,7 @@ public class Filiaal
     [Required]
     [Range(0, int.MaxValue)] // Only positive numbers
     public int MeterSchappen { get; set; }
-    
+
     #region Relationships
 
     public ICollection<PrognoseInput> PrognoseInputs { get; set; }

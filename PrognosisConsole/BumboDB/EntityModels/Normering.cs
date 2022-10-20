@@ -20,4 +20,6 @@ public class Normering
 
     [Required]
     public int AantalPerUur { get; set; }
+
+    public override string ToString() => $"{Eenheid}: {AantalPerUur}x{Eenheid} per hour during {Activiteit} activity";
 }

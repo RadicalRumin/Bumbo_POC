@@ -13,4 +13,6 @@ public class Eenheid
     public ICollection<PrognoseInput> PrognoseInputs { get; set; }
 
     #endregion
+
+    public override string ToString() => EenheidType;
 }

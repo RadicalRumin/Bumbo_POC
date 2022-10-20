@@ -20,4 +20,6 @@ public class Locatie
     public ICollection<Werknemer> Werknemers { get; set; }
 
     public ICollection<Filiaal> Filialen { get; set; }
+
+    public override string ToString() => $"{Plaats}, {Postcode} {Huisnummer}";
 }
