@@ -27,6 +27,7 @@ public sealed class BumboContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         
+        
         #region CompositeKeys
 
         modelBuilder.Entity<PrognoseInput>()
@@ -84,6 +85,8 @@ public sealed class BumboContext : DbContext
             LocatieId = 1
         };
 
+        modelBuilder.Entity<Locatie>().HasData(locatie);
+
         var filiaal = new Filiaal()
         {
             FiliaalId = 1,
@@ -93,37 +96,52 @@ public sealed class BumboContext : DbContext
             LocatieID = 1,
         };
 
+        modelBuilder.Entity<Filiaal>().HasData(filiaal);
+
+        var afdelingKassa = new Afdeling() { Naam = "Kassa" };
+        var afdelingVakkenvullen = new Afdeling() { Naam = "Vakkenvullers" };
+
+        modelBuilder.Entity<Afdeling>().HasData(afdelingKassa, afdelingVakkenvullen);
+
         var vakenvullen = new Activiteit()
         {
-            Afdeling = new Afdeling() { Naam = "Vakkenvullers" },
-            Beschrijving = "Vakkenvullen",
+            Afdeling = afdelingVakkenvullen,
+            Beschrijving = "Vakkenvullen"
         };
 
         var kassa = new Activiteit()
         {
-            Afdeling = new Afdeling() { Naam = "Kassa" },
+            Afdeling = afdelingKassa,
             Beschrijving = "Kassa"
         };
 
-        modelBuilder.Entity<Normering>()
+        modelBuilder.Entity<Activiteit>().HasData(vakenvullen, kassa);
+
+        var coli = new Eenheid() { EenheidType = "Coli" };
+        var klanten = new Eenheid() { EenheidType = "Klanten" };
+        var meter = new Eenheid() { EenheidType = "Meter" };
+
+        modelBuilder.Entity<Eenheid>().HasData(coli, klanten, meter);
+
+            modelBuilder.Entity<Normering>()
             .HasData(
                 new Normering { 
                     NormeringId = 1, 
-                    Eenheid = new Eenheid() { EenheidType = "Coli" },
+                    Eenheid = coli,
                     Activiteit = vakenvullen,
                     AantalPerUur = 2,
                     Filiaal = filiaal,
                 },
                 new Normering { 
                     NormeringId = 2, 
-                    Eenheid = new Eenheid() { EenheidType = "Klanten" },
+                    Eenheid = klanten,
                     Activiteit = kassa,
                     AantalPerUur = 30,
                     Filiaal = filiaal,
                 },
                 new Normering { 
                     NormeringId = 3, 
-                    Eenheid = new Eenheid() { EenheidType = "Meter" },
+                    Eenheid = meter,
                     Activiteit = vakenvullen,
                     AantalPerUur = 120,
                     Filiaal = filiaal,
@@ -135,18 +153,18 @@ public sealed class BumboContext : DbContext
 
     #region DbSets
 
-    public DbSet<Activiteit> Activiteiten;
-    public DbSet<Afdeling> Afdelingen;
-    public DbSet<Eenheid> Eenheden;
-    public DbSet<Filiaal> Filialen;
-    public DbSet<Functie> Functies;
-    public DbSet<GewerkteUren> GewerkteUren;
-    public DbSet<Locatie> Locaties;
-    public DbSet<Normering> Normeringen;
-    public DbSet<PrognoseInput> PrognoseInputs;
-    public DbSet<PrognoseOutput> PrognoseOutputs;
-    public DbSet<Roosterpunt> Roosterpunten;
-    public DbSet<Werknemer> Werknemers;
+    public DbSet<Activiteit> Activiteiten { get; set; }
+    public DbSet<Afdeling> Afdelingen{ get; set; }
+    public DbSet<Eenheid> Eenheden{ get; set; }
+    public DbSet<Filiaal> Filialen{ get; set; }
+    public DbSet<Functie> Functies{ get; set; }
+    public DbSet<GewerkteUren> GewerkteUren{ get; set; }
+    public DbSet<Locatie> Locaties{ get; set; }
+    public DbSet<Normering> Normeringen{ get; set; }
+    public DbSet<PrognoseInput> PrognoseInputs{ get; set; }
+    public DbSet<PrognoseOutput> PrognoseOutputs{ get; set; }
+    public DbSet<Roosterpunt> Roosterpunten{ get; set; }
+    public DbSet<Werknemer> Werknemers{ get; set; }
 
     #endregion
 }

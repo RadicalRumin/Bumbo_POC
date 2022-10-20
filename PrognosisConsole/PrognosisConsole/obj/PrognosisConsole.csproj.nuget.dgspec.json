@@ -1,25 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/PrognosisConsole/PrognosisConsole.csproj": {}
+    "D:\\Avans\\LJ2\\Bumbo\\POC\\PrognosisConsole\\PrognosisConsole\\PrognosisConsole.csproj": {}
   },
   "projects": {
-    "/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/PrognosisConsole/PrognosisConsole.csproj": {
+    "D:\\Avans\\LJ2\\Bumbo\\POC\\PrognosisConsole\\PrognosisConsole\\PrognosisConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/PrognosisConsole/PrognosisConsole.csproj",
+        "projectUniqueName": "D:\\Avans\\LJ2\\Bumbo\\POC\\PrognosisConsole\\PrognosisConsole\\PrognosisConsole.csproj",
         "projectName": "PrognosisConsole",
-        "projectPath": "/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/PrognosisConsole/PrognosisConsole.csproj",
-        "packagesPath": "/home/qaz/.nuget/packages/",
-        "outputPath": "/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/PrognosisConsole/obj/",
+        "projectPath": "D:\\Avans\\LJ2\\Bumbo\\POC\\PrognosisConsole\\PrognosisConsole\\PrognosisConsole.csproj",
+        "packagesPath": "C:\\Users\\Dylan\\.nuget\\packages\\",
+        "outputPath": "D:\\Avans\\LJ2\\Bumbo\\POC\\PrognosisConsole\\PrognosisConsole\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/home/qaz/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Dylan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,7 +51,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -52,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.108/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
