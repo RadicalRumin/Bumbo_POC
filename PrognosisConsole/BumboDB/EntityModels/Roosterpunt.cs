@@ -19,4 +19,6 @@ public class Roosterpunt
 
     [Required]
     public Afdeling Afdeling { get; set; }
+
+    public override string ToString() => $"{Afdeling}/{Werknemer} {BeginTijd}:{EindTijd}";
 }

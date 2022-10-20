@@ -57,4 +57,9 @@ public class Werknemer
     public Locatie Locatie { get; set; }
 
     public Afdeling Afdeling { get; set; }
+
+    public override string ToString()
+    {
+        return $"BID: {BID}, {Voornaam} {Tussenvoegsel} {Achternaam}";
+    }
 }
