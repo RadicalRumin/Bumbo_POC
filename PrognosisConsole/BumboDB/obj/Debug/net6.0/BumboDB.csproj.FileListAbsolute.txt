@@ -1,3 +1,17 @@
+/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/BumboDB/bin/Debug/net6.0/BumboDB.deps.json
+/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/BumboDB/bin/Debug/net6.0/BumboDB.runtimeconfig.json
+/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/BumboDB/bin/Debug/net6.0/BumboDB.dll
+/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/BumboDB/bin/Debug/net6.0/ref/BumboDB.dll
+/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/BumboDB/bin/Debug/net6.0/BumboDB.pdb
+/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/BumboDB/obj/Debug/net6.0/BumboDB.csproj.AssemblyReference.cache
+/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/BumboDB/obj/Debug/net6.0/BumboDB.GeneratedMSBuildEditorConfig.editorconfig
+/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/BumboDB/obj/Debug/net6.0/BumboDB.AssemblyInfoInputs.cache
+/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/BumboDB/obj/Debug/net6.0/BumboDB.AssemblyInfo.cs
+/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/BumboDB/obj/Debug/net6.0/BumboDB.csproj.CoreCompileInputs.cache
+/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/BumboDB/obj/Debug/net6.0/BumboDB.dll
+/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/BumboDB/obj/Debug/net6.0/ref/BumboDB.dll
+/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/BumboDB/obj/Debug/net6.0/BumboDB.pdb
+/home/qaz/Programming/CSharp/Bumbo_POC/PrognosisConsole/BumboDB/obj/Debug/net6.0/BumboDB.genruntimeconfig.cache
 D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\BumboDB\bin\Debug\net6.0\BumboDB.deps.json
 D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\BumboDB\bin\Debug\net6.0\BumboDB.runtimeconfig.json
 D:\Avans\LJ2\Bumbo\POC\PrognosisConsole\BumboDB\bin\Debug\net6.0\BumboDB.dll
